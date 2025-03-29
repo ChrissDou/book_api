@@ -37,7 +37,7 @@ It supports full CRUD operations with MySQL, returns JSON responses, and follows
 
 🗃️ Database Setup
 Import this table using phpMyAdmin or run the SQL below:
-
+```sql
 CREATE TABLE books (
   id INT AUTO_INCREMENT PRIMARY KEY,
   title VARCHAR(255) NOT NULL,
@@ -45,6 +45,7 @@ CREATE TABLE books (
   year YEAR NOT NULL,
   available BOOLEAN NOT NULL
 );
+```
 
 Then configure config/app_local.php for your database settings:
 
