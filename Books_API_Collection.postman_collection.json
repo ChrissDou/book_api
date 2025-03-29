@@ -10,8 +10,11 @@
 	"item": [
 		{
 			"name": "Get All Books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "PUT",
+				"method": "GET",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -88,9 +91,6 @@
 		},
 		{
 			"name": "Update Book",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -104,7 +104,7 @@
 					"raw": "{\n    \"title\": \"Business Professional 1\",\n    \"author\": \"Chris\",\n    \"year\": \"2025\",\n    \"available\": true\n}"
 				},
 				"url": {
-					"raw": "http://localhost:8765/books/edit/1",
+					"raw": "http://localhost:8765/books/edit/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -113,7 +113,7 @@
 					"path": [
 						"books",
 						"edit",
-						"1"
+						"2"
 					]
 				}
 			},
