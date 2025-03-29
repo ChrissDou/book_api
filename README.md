@@ -48,6 +48,7 @@ CREATE TABLE books (
 ```
 
 Then configure config/app_local.php for your database settings:
+```php
 
 'Datasources' => [
     'default' => [
@@ -59,14 +60,18 @@ Then configure config/app_local.php for your database settings:
         ...
     ]
 ]
+```
 
 📚 API Endpoints
+```bash
 Method        	Endpoint	                Description
 GET	            /books	                    Get all books
 GET	            /books/view/:id             Get a single book
 POST	        /books/add                	Add a new book
 PUT	            /books/edit/:id	            Update a book
 DELETE	        /books/delete/:id	        Delete a book
+```
+
 
 📥 Postman Collection
 A Postman Collection is included for quick testing:
