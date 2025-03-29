@@ -75,7 +75,7 @@ DELETE	        /books/delete/:id	        Delete a book
 
 📥 Postman Collection
 A Postman Collection is included for quick testing:
-👉 Books_API_Collection.postman_collection.json
+👉 Books API Collection.postman_collection
 
 🙋 Author
 Developed by: Boxuan Chen (陈博轩)
