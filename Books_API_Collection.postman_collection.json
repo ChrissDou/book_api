@@ -1,121 +1,144 @@
 {
-    "info": {
-        "name": "Books API Collection",
-        "_postman_id": "books-api-collection-id",
-        "description": "Postman collection for testing Books API (CakePHP)",
-        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-    },
-    "item": [
-        {
-            "name": "Get All Books",
-            "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                    "raw": "http://localhost:8765/books.json",
-                    "protocol": "http",
-                    "host": [
-                        "localhost"
-                    ],
-                    "port": "8765",
-                    "path": [
-                        "books.json"
-                    ]
-                }
-            }
-        },
-        {
-            "name": "Get Single Book",
-            "request": {
-                "method": "GET",
-                "header": [],
-                "url": {
-                    "raw": "http://localhost:8765/books/1.json",
-                    "protocol": "http",
-                    "host": [
-                        "localhost"
-                    ],
-                    "port": "8765",
-                    "path": [
-                        "books",
-                        "1.json"
-                    ]
-                }
-            }
-        },
-        {
-            "name": "Add Book",
-            "request": {
-                "method": "POST",
-                "header": [
-                    {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                    }
-                ],
-                "body": {
-                    "mode": "raw",
-                    "raw": "{\n    \"title\": \"New Book\",\n    \"author\": \"Author A\",\n    \"year\": \"2023\",\n    \"available\": true\n}"
-                },
-                "url": {
-                    "raw": "http://localhost:8765/books.json",
-                    "protocol": "http",
-                    "host": [
-                        "localhost"
-                    ],
-                    "port": "8765",
-                    "path": [
-                        "books.json"
-                    ]
-                }
-            }
-        },
-        {
-            "name": "Update Book",
-            "request": {
-                "method": "PUT",
-                "header": [
-                    {
-                        "key": "Content-Type",
-                        "value": "application/json"
-                    }
-                ],
-                "body": {
-                    "mode": "raw",
-                    "raw": "{\n    \"title\": \"Updated Title\",\n    \"author\": \"Updated Author\",\n    \"year\": \"2022\",\n    \"available\": false\n}"
-                },
-                "url": {
-                    "raw": "http://localhost:8765/books/1.json",
-                    "protocol": "http",
-                    "host": [
-                        "localhost"
-                    ],
-                    "port": "8765",
-                    "path": [
-                        "books",
-                        "1.json"
-                    ]
-                }
-            }
-        },
-        {
-            "name": "Delete Book",
-            "request": {
-                "method": "DELETE",
-                "header": [],
-                "url": {
-                    "raw": "http://localhost:8765/books/1.json",
-                    "protocol": "http",
-                    "host": [
-                        "localhost"
-                    ],
-                    "port": "8765",
-                    "path": [
-                        "books",
-                        "1.json"
-                    ]
-                }
-            }
-        }
-    ]
+	"info": {
+		"_postman_id": "9a9f462e-40a0-4c5a-a6a9-758ae75c692e",
+		"name": "Books API Collection",
+		"description": "Postman collection for testing Books API (CakePHP)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43576043",
+		"_collection_link": "https://boxuanchen.postman.co/workspace/BoxuanChen's-Workspace~14f3892a-9fa2-444a-8174-aa709950eefb/collection/43576043-9a9f462e-40a0-4c5a-a6a9-758ae75c692e?action=share&source=collection_link&creator=43576043"
+	},
+	"item": [
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"test1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8765/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/books/view/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"books",
+						"view",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"IT professional 1\",\n    \"author\": \"Boxuan\",\n    \"year\": \"2001\",\n    \"available\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8765/books/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"books",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Business Professional 1\",\n    \"author\": \"Chris\",\n    \"year\": \"2025\",\n    \"available\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8765/books/edit/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"books",
+						"edit",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/books/delete/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"books",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
 }
